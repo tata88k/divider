@@ -1,12 +1,20 @@
-# Divider
+package com.thepacific.paficif_divider;
 
-Android library providing a simple way to control divider items of RecyclerView.
+import android.graphics.drawable.Drawable;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 
-It only works for LinearLayoutManager.
+import com.thepacific.pacific_divider.RecyclerViewDivider;
 
-# Usage
+public class MainActivity extends AppCompatActivity {
 
-``` java
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        RecyclerView recyclerView = new RecyclerView(this);
         recyclerView.addItemDecoration(RecyclerViewDivider.builder(this)
                 .leftMargin(R.dimen.default_divider)
                 .rightMargin(R.dimen.default_divider)
@@ -46,7 +54,7 @@ It only works for LinearLayoutManager.
 
                     @Override
                     public int getStrokeWidth(int position) {
-                        
+
                         return 0;
                     }
                 })
@@ -58,5 +66,5 @@ It only works for LinearLayoutManager.
                 })
                 .hideLastDivider()
                 .build());
-
-```
+    }
+}

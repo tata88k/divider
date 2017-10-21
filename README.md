@@ -2,16 +2,23 @@
 
 Android library providing a simple way to control divider items of RecyclerView.
 
-It only works for LinearLayoutManager.[ ![Download](https://api.bintray.com/packages/thepacific/maven/divider/images/download.svg) ](https://bintray.com/thepacific/maven/divider/_latestVersion)
+[ ![Download](https://api.bintray.com/packages/thepacific/maven/divider/images/download.svg) ](https://bintray.com/thepacific/maven/divider/_latestVersion)
+
+# Setup
+```groovy
+compile 'com.github.thepacific:divider:{lastestVersion}'
+```
 
 # Usage
 
 ``` java
         recyclerView.addItemDecoration(RecyclerViewDivider.builder(this)
-                .leftMargin(R.dimen.default_divider)
-                .rightMargin(R.dimen.default_divider)
-                .topMargin(R.dimen.default_divider)
-                .bottomMargin(R.dimen.default_divider)
+                .leftMargin(R.dimen.divider)
+                .rightMargin(R.dimen.divider)
+                .topMargin(R.dimen.divider)
+                .bottomMargin(R.dimen.divider)
+                .color(R.color.divider, R.dimen.divider_stroke_width)
+                .drawable(R.drawable.divider)
                 .leftMarginFactory(new RecyclerViewDivider.MarginFactory() {
                     @Override
                     public int getMargin(int position) {
@@ -36,8 +43,6 @@ It only works for LinearLayoutManager.[ ![Download](https://api.bintray.com/pack
                         return 0;
                     }
                 })
-                .color(R.color.color_divider, R.dimen.default_color_divider_stroke_width)
-                .drawable(R.drawable.drawable_divider)
                 .drawableFactory(new RecyclerViewDivider.DrawableFactory() {
                     @Override
                     public Drawable getDrawable(int position) {
@@ -46,7 +51,6 @@ It only works for LinearLayoutManager.[ ![Download](https://api.bintray.com/pack
 
                     @Override
                     public int getStrokeWidth(int position) {
-                        
                         return 0;
                     }
                 })
@@ -58,5 +62,62 @@ It only works for LinearLayoutManager.[ ![Download](https://api.bintray.com/pack
                 })
                 .hideLastDivider()
                 .build());
+    }
 
 ```
+
+# DrawableFactory
+
+when you are using a DrawableFactory, please be aware of this
+
+``` java
+new RecyclerViewDivider.DrawableFactory() {
+            @Override
+            public Drawable getDrawable(int position) {
+                /**
+                 * When using ColorDrawable, don't forget to override DrawableFactory.getStrokeWidth().
+                 * Because ColorDrawable.getIntrinsicWidth() always returns -1.
+                 * So we need the getStrokeWidth() to provider ColorDrawable's size
+                 * For example:
+                 *
+                 * <pre><code>
+                 *   new ColorDrawable(ContextCompat.getColor(MainActivity.this, R.color.divider));
+                 * </code></pre>
+                 *
+                 * or
+                 *
+                 * <pre><code>
+                 *   <drawable name="divider">#303F9F</drawable>
+                 * </code></pre>
+                 */
+                return null;
+            }
+
+            @Override
+            public int getStrokeWidth(int position) {
+                /**
+                 * No need to override, when using XML Drawable resource.
+                 * Because in this case Drawable.getIntrinsicWidth() always returns it's size.
+                 * So {@link getStrokeWidth()} is useless.
+                 * For example:
+                 *
+                 * divider.xml drawable
+                 *
+                 * <pre><code>
+                 *   <?xml version="1.0" encoding="utf-8"?>
+                 *       <shape xmlns:android="http://schemas.android.com/apk/res/android"
+                 *           android:shape="rectangle">
+                 *           <size android:height="1dp" android:width="1dp"></size>
+                 *           <solid android:color="@color/divider"></solid>
+                 *       </shape>
+                 * </code></pre>
+                 */
+                return 0;
+            }
+        };
+```
+
+# License 
+
+[The MIT License ](https://opensource.org/licenses/MIT)
+

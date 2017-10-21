@@ -2,9 +2,10 @@
 <resources>
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
-    <color name="color_divider">#303F9F</color>
-    <drawable name="drawable_divider">#303F9F</drawable>
     <color name="colorAccent">#FF4081</color>
-    <dimen name="default_divider">1dp</dimen>
-    <dimen name="default_color_divider_stroke_width">1dp</dimen>
+
+    <color name="divider">#303F9F</color>
+    <drawable name="divider">#303F9F</drawable>
+    <dimen name="divider">1dp</dimen>
+    <dimen name="divider_stroke_width">1dp</dimen>
 </resources>

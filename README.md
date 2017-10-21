@@ -46,7 +46,6 @@ compile 'com.github.thepacific:divider:{lastestVersion}'
                 .drawableFactory(new RecyclerViewDivider.DrawableFactory() {
                     @Override
                     public Drawable getDrawable(int position) {
-
                         return null;
                     }
 

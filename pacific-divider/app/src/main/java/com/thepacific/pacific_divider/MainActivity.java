@@ -17,32 +17,32 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         RecyclerView recyclerView = new RecyclerView(this);
         recyclerView.addItemDecoration(RecyclerViewDivider.builder(this)
-                .leftMargin(R.dimen.divider)
-                .rightMargin(R.dimen.divider)
-                .topMargin(R.dimen.divider)
-                .bottomMargin(R.dimen.divider)
+                .leftMargin(R.dimen.divider_left)
+                .rightMargin(R.dimen.divider_right)
+                .topMargin(R.dimen.divider_top)
+                .bottomMargin(R.dimen.divider_bottom)
                 .leftMarginFactory(new RecyclerViewDivider.MarginFactory() {
                     @Override
                     public int getMargin(int position) {
-                        return 0;
+                        return getResources().getDimensionPixelSize(R.dimen.divider_left);
                     }
                 })
                 .rightMarginFactory(new RecyclerViewDivider.MarginFactory() {
                     @Override
                     public int getMargin(int position) {
-                        return 0;
+                        return getResources().getDimensionPixelSize(R.dimen.divider_right);
                     }
                 })
                 .topMarginFactory(new RecyclerViewDivider.MarginFactory() {
                     @Override
                     public int getMargin(int position) {
-                        return 0;
+                        return getResources().getDimensionPixelSize(R.dimen.divider_top);
                     }
                 })
                 .bottomMarginFactory(new RecyclerViewDivider.MarginFactory() {
                     @Override
                     public int getMargin(int position) {
-                        return 0;
+                        return getResources().getDimensionPixelSize(R.dimen.divider_bottom);
                     }
                 })
                 .color(R.color.divider, R.dimen.divider_stroke_width)

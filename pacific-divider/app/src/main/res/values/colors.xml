@@ -8,4 +8,8 @@
     <drawable name="divider">#303F9F</drawable>
     <dimen name="divider">1dp</dimen>
     <dimen name="divider_stroke_width">1dp</dimen>
+    <dimen name="divider_left">16dp</dimen>
+    <dimen name="divider_right">16dp</dimen>
+    <dimen name="divider_top">16dp</dimen>
+    <dimen name="divider_bottom">16dp</dimen>
 </resources>

@@ -3,10 +3,9 @@ package com.thepacific.paficif_divider;
 import android.graphics.drawable.Drawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
-import com.thepacific.pacific_divider.RecyclerViewDivider;
+import com.thepacific.divider.RecyclerViewDivider;
 
 public class MainActivity extends AppCompatActivity {
 

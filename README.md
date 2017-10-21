@@ -68,7 +68,7 @@ compile 'com.github.thepacific:divider:{lastestVersion}'
 
 # DrawableFactory
 
-when you are using a DrawableFactory, please be aware of this
+When you are using a DrawableFactory, please be aware of this
 
 ``` java
 new RecyclerViewDivider.DrawableFactory() {

@@ -75,9 +75,9 @@ new RecyclerViewDivider.DrawableFactory() {
             @Override
             public Drawable getDrawable(int position) {
                 /**
-                 * When using ColorDrawable, don't forget to override DrawableFactory.getStrokeWidth().
+                 * When using ColorDrawable, don't forget to override {@link getStrokeWidth()}.
                  * Because ColorDrawable.getIntrinsicWidth() always returns -1.
-                 * So we need the getStrokeWidth() to provider ColorDrawable's size
+                 * So we need {@link getStrokeWidth()} to provider ColorDrawable's size
                  * For example:
                  *
                  * <pre><code>

@@ -5,7 +5,6 @@
     <color name="colorAccent">#FF4081</color>
 
     <color name="divider">#303F9F</color>
-    <drawable name="divider">#303F9F</drawable>
     <dimen name="divider">1dp</dimen>
     <dimen name="divider_stroke_width">1dp</dimen>
     <dimen name="divider_left">16dp</dimen>

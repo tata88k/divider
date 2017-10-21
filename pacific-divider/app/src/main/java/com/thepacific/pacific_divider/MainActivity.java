@@ -1,13 +1,12 @@
-package com.thepacific.paficif_divider;
+package com.thepacific.pacific_divider;
 
-import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
-import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
 
 import com.thepacific.divider.RecyclerViewDivider;
+import com.thepacific.paficif_divider.R;
 
 public class MainActivity extends AppCompatActivity {
 

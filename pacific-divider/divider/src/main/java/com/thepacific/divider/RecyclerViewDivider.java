@@ -252,6 +252,10 @@ public final class RecyclerViewDivider extends RecyclerView.ItemDecoration {
         return mBottomMarginFactory.getMargin(position);
     }
 
+    public void addTo(RecyclerView recyclerView) {
+        recyclerView.addItemDecoration(this);
+    }
+
     public static Builder builder(@Nullable Context context) {
         if (context == null) {
             throw new NullPointerException("context = null");

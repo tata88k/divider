@@ -68,9 +68,7 @@ compile 'com.github.thepacific:divider:{lastestVersion}'
 or
 
 ``` java
-      RecyclerViewDivider.builder(this)
-          .build()
-          .addTo(recyclerView);
+      RecyclerViewDivider.builder(this).build().addTo(recyclerView);
 ```
 
 # DrawableFactory

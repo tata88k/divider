@@ -116,6 +116,15 @@ When you are using a DrawableFactory, please be aware of this
         };
 ```
 
+or
+
+``` java
+      RecyclerViewDivider.builder(this)
+          ......
+          .build()
+          .addTo(recyclerView);
+```
+
 # License 
 
 [The MIT License ](https://opensource.org/licenses/MIT)

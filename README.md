@@ -125,7 +125,7 @@ When you are using a DrawableFactory, please be aware of this
 ```
 # Similar project 
 
-[RecyclerViewDivider](https://github.com/Fondesa/RecyclerViewDivider)
+[RecyclerViewDivider https://github.com/Fondesa/RecyclerViewDivider](https://github.com/Fondesa/RecyclerViewDivider)
 
 # License 
 

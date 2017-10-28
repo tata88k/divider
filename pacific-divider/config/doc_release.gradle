@@ -1,3 +1,4 @@
+
 logger.info("Library using version=$project.version")
 
 if (project.plugins.hasPlugin('com.android.library')) {

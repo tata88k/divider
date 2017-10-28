@@ -7,51 +7,54 @@ allprojects {
 
 ext {
     groupId = "com.github.thepacific"
-    compile = 26
-    buildTools = "26.0.2"
+    compile = 27
+    buildTools = "27.0.0"
     min = "14"
-    target = "26"
+    target = "27"
     versionCode = 1
     versionName = "0.0.1"
-    junit = "4.12"
+
     testRunner = "1.0.1"
-    espresso = "3.0.1"
-    support = "26.1.0"
+    junit = "4.12"
+    espresso = "3.0.0"
+    support = "27.0.0"
+    mockito = "2.10.0"
+
     constraint = "1.1.0-beta3"
     lifecycle = "1.0.0-rc1"
-    lifecycleRuntime = "1.0.3"
 
     findBugsJrs305 = "3.0.2"
     okhttp3 = "3.9.0"
     okio = "1.13.0"
     retrofit2 = "2.3.0"
     gson = "2.8.2"
-    rxjava2 = "2.1.5"
+    rxjava2 = "2.1.6"
     rxandroid2 = "2.0.1"
-    autoDispose = "0.3.0"
-    timber = "4.5.1"
 
     inject = "1"
     javaxAnnotation = "1.3"
-    errorProneAnnotation = "2.0.21"
+    errorProne = "2.0.21"
     dagger2 = "2.12"
     autoValue = "1.5.1"
 
+    autoDispose = "0.4.0"
+    timber = "4.5.1"
     permissions = "0.9.4"
     parceler = "1.1.9"
-    mAdapter = "2.1.0"
-    mGuava = "0.0.1"
-    mCommon = "0.0.1"
-    presentation = "0.0.1"
-    data = "0.0.1"
-    mockito = "2.10.0"
     glide = "4.2.0"
-
     leakcanary = "1.5.4"
     multidex = "1.0.2"
     phoenix = "2.0.0"
+    reflection = "0.9.6"
+
+    mAdapter = "2.1.0"
+    mGuava = "0.0.2"
+    mCommon = "0.0.2"
+    presentation = "0.0.2"
+    data = "0.0.2"
 
     dep = [
+            supportV4               : "com.android.support:support-v4:$support",
             appcompat               : "com.android.support:appcompat-v7:$support",
             palette                 : "com.android.support:palette-v7:$support",
             design                  : "com.android.support:design:$support",
@@ -72,10 +75,11 @@ ext {
             gson                    : "com.google.code.gson:gson:$gson",
             rxjava2                 : "io.reactivex.rxjava2:rxjava:$rxjava2",
             rxandroid2              : "io.reactivex.rxjava2:rxandroid:$rxandroid2",
-            autoDisposeAndroid      : "com.uber.autodispose:autodispose-android:$autoDispose",
             autoDispose             : "com.uber.autodispose:autodispose:$autoDispose",
+            autoDisposeAndroid      : "com.uber.autodispose:autodispose-android:$autoDispose",
+            autoDisposeComponent    : "com.uber.autodispose:autodispose-android-archcomponents:$autoDispose",
             annotationApi           : "javax.annotation:javax.annotation-api:$javaxAnnotation",
-            errorProneAnnotation    : "com.google.errorprone:error_prone_annotations:$errorProneAnnotation",
+            errorProne              : "com.google.errorprone:error_prone_annotations:$errorProne",
             inject                  : "javax.inject:javax.inject:$inject",
             autoValue               : "com.google.auto.value:auto-value:$autoValue",
             autoValueCompiler       : "com.google.auto.value:auto-value:$autoValue",
@@ -87,15 +91,21 @@ ext {
             rxPermissions           : "com.tbruyelle.rxpermissions2:rxpermissions:$permissions@aar",
             parceler                : "org.parceler:parceler-api:$parceler",
             parcelerProcessor       : "org.parceler:parceler:$parceler",
+            theAdapter              : "com.github.thepacific:adapter:$mAdapter",
+            theData                 : "com.github.thepacific:data:$data",
+            theCommon               : "com.github.thepacific:common:$mCommon",
+            thePresentation         : "com.github.thepacific:presentation:$presentation",
+            theGuava                : "com.github.thepacific:guava:$mGuava",
             mockito                 : "org.mockito:mockito-core:$mockito",
+            junit                   : "junit:junit:$junit",
             testRunner              : "com.android.support.test:runner:$testRunner",
             espresso                : "com.android.support.test.espresso:espresso-core:$espresso",
             multidex                : "com.android.support:multidex:$multidex",
             multidexInstrumentation : "com.android.support:multidex-instrumentation:$multidex",
+            timber                  : "com.jakewharton.timber:timber:$timber",
             glide                   : "com.github.bumptech.glide:glide:$glide",
             glideProcessor          : "com.github.bumptech.glide:compiler:$glide",
-            timber                  : "com.jakewharton.timber:timber:$timber",
             processPhoenix          : "com.jakewharton:process-phoenix:$phoenix",
-            theAdapter              : "com.github.thepacific:adapter:$mAdapter"
+            reflection              : "org.jooq:joor:$reflection"
     ]
 }

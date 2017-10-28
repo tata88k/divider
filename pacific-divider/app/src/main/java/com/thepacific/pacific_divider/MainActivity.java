@@ -5,7 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
 
-import com.thepacific.divider.RecyclerViewDivider;
+import com.pacific.divider.RecyclerViewDivider;
 import com.thepacific.paficif_divider.R;
 
 public class MainActivity extends AppCompatActivity {

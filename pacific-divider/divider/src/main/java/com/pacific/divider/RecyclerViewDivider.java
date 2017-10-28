@@ -1,4 +1,4 @@
-package com.thepacific.divider;
+package com.pacific.divider;
 
 import android.content.Context;
 import android.content.res.TypedArray;

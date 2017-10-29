@@ -65,6 +65,12 @@ compile 'com.github.thepacific:divider:{lastestVersion}'
 
 ```
 
+or
+
+``` java
+      RecyclerViewDivider.builder(this).build().addTo(recyclerView);
+```
+
 # DrawableFactory
 
 When you are using a DrawableFactory, please be aware of this
@@ -115,15 +121,9 @@ When you are using a DrawableFactory, please be aware of this
             }
         };
 ```
+# Similar project 
 
-or
-
-``` java
-      RecyclerViewDivider.builder(this)
-          ......
-          .build()
-          .addTo(recyclerView);
-```
+[RecyclerViewDivider https://github.com/Fondesa/RecyclerViewDivider](https://github.com/Fondesa/RecyclerViewDivider)
 
 # License 
 

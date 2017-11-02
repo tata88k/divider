@@ -11,8 +11,8 @@ ext {
     buildTools = "27.0.0"
     min = "14"
     target = "27"
-    versionCode = 1
-    versionName = "0.0.1"
+    versionCode = 3
+    versionName = "0.0.3"
 
     testRunner = "1.0.1"
     junit = "4.12"

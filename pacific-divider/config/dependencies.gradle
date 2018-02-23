@@ -2,110 +2,141 @@ allprojects {
     repositories {
         google()
         jcenter()
+        mavenCentral()
+
+        maven {
+            url "https://dl.bintray.com/kotlin/kotlin-eap/"
+        }
     }
 }
 
 ext {
     groupId = "com.github.thepacific"
     compile = 27
-    buildTools = "27.0.0"
-    min = "14"
+    buildTools = "27.0.3"
+    min = "16"
     target = "27"
-    versionCode = 3
-    versionName = "0.0.3"
+    versionCode = 4
+    versionName = "0.0.4"
 
     testRunner = "1.0.1"
     junit = "4.12"
-    espresso = "3.0.0"
-    support = "27.0.0"
-    mockito = "2.10.0"
+    espresso = "3.0.2-alpha1"
+    support = "27.0.2"
+    mockito = "2.13.0"
+    truth = "0.37"
 
-    constraint = "1.1.0-beta3"
-    lifecycle = "1.0.0-rc1"
+    constraint = "1.1.0-beta4"
+    lifecycle = "1.1.0"
+    room = "1.1.0-alpha1"
+    paging = "1.0.0-alpha5"
 
     findBugsJrs305 = "3.0.2"
-    okhttp3 = "3.9.0"
-    okio = "1.13.0"
+    okhttp3 = "3.9.1"
+    okio = "1.14.0"
     retrofit2 = "2.3.0"
-    gson = "2.8.2"
-    rxjava2 = "2.1.6"
-    rxandroid2 = "2.0.1"
+    moshi = "1.5.0"
+    rxjava = "2.1.9"
+    rxandroid = "2.0.2"
 
     inject = "1"
     javaxAnnotation = "1.3"
-    errorProne = "2.0.21"
-    dagger2 = "2.12"
-    autoValue = "1.5.1"
+    errorProne = "2.2.0"
+    jetAnnotations = "15.0"
+    dagger2 = "2.14.1"
+    autoValue = "1.5.3"
 
-    autoDispose = "0.4.0"
-    timber = "4.5.1"
-    permissions = "0.9.4"
+    dispose = "0.6.0"
+    timber = "4.6.0"
+    permissions = "0.9.5"
     parceler = "1.1.9"
-    glide = "4.2.0"
+    glide = "4.6.1"
     leakcanary = "1.5.4"
     multidex = "1.0.2"
     phoenix = "2.0.0"
-    reflection = "0.9.6"
+    reflection = "0.9.7"
+    androidJob = "1.2.2"
 
-    mAdapter = "2.1.0"
-    mGuava = "0.0.2"
-    mCommon = "0.0.2"
-    presentation = "0.0.2"
-    data = "0.0.2"
+    mAdapter = "2.1.1"
+    mGuava = "0.0.8"
+    mCommon = "0.0.8"
+    mPresentation = "0.0.8"
+    mData = "0.0.8"
+    threeTenBP = "1.0.5"
 
     dep = [
-            supportV4               : "com.android.support:support-v4:$support",
-            appcompat               : "com.android.support:appcompat-v7:$support",
-            palette                 : "com.android.support:palette-v7:$support",
-            design                  : "com.android.support:design:$support",
-            cardview                : "com.android.support:cardview-v7:$support",
-            recyclerview            : "com.android.support:recyclerview-v7:$support",
-            constraint              : "com.android.support.constraint:constraint-layout:$constraint",
-            lifecycleReactivestreams: "android.arch.lifecycle:reactivestreams:$lifecycle",
-            lifecycleExtensions     : "android.arch.lifecycle:extensions:$lifecycle",
-            lifecycleJava8          : "android.arch.lifecycle:common-java8:$lifecycle",
-            lifecycleTest           : "android.arch.core:core-testing:$lifecycle",
-            findBugsJrs305          : "com.google.code.findbugs:jsr305:$findBugsJrs305",
-            okhttp3                 : "com.squareup.okhttp3:okhttp:$okhttp3",
-            loggingInterceptor      : "com.squareup.okhttp3:logging-interceptor:$okhttp3",
-            okio                    : "com.squareup.okio:okio:$okio",
-            retrofit2               : "com.squareup.retrofit2:retrofit:$retrofit2",
-            adapterRxjava2          : "com.squareup.retrofit2:adapter-rxjava2:$retrofit2",
-            converterGson           : "com.squareup.retrofit2:converter-gson:$retrofit2",
-            gson                    : "com.google.code.gson:gson:$gson",
-            rxjava2                 : "io.reactivex.rxjava2:rxjava:$rxjava2",
-            rxandroid2              : "io.reactivex.rxjava2:rxandroid:$rxandroid2",
-            autoDispose             : "com.uber.autodispose:autodispose:$autoDispose",
-            autoDisposeAndroid      : "com.uber.autodispose:autodispose-android:$autoDispose",
-            autoDisposeComponent    : "com.uber.autodispose:autodispose-android-archcomponents:$autoDispose",
-            annotationApi           : "javax.annotation:javax.annotation-api:$javaxAnnotation",
-            errorProne              : "com.google.errorprone:error_prone_annotations:$errorProne",
-            inject                  : "javax.inject:javax.inject:$inject",
-            autoValue               : "com.google.auto.value:auto-value:$autoValue",
-            autoValueCompiler       : "com.google.auto.value:auto-value:$autoValue",
-            dagger                  : "com.google.dagger:dagger:$dagger2",
-            daggerAndroid           : "com.google.dagger:dagger-android:$dagger2",
-            daggerAndroidSupport    : "com.google.dagger:dagger-android-support:$dagger2",
-            daggerCompiler          : "com.google.dagger:dagger-compiler:$dagger2",
-            daggerAndroidProcessor  : "com.google.dagger:dagger-android-processor:$dagger2",
-            rxPermissions           : "com.tbruyelle.rxpermissions2:rxpermissions:$permissions@aar",
-            parceler                : "org.parceler:parceler-api:$parceler",
-            parcelerProcessor       : "org.parceler:parceler:$parceler",
-            theAdapter              : "com.github.thepacific:adapter:$mAdapter",
-            theData                 : "com.github.thepacific:data:$data",
-            theCommon               : "com.github.thepacific:common:$mCommon",
-            thePresentation         : "com.github.thepacific:presentation:$presentation",
-            theGuava                : "com.github.thepacific:guava:$mGuava",
-            mockito                 : "org.mockito:mockito-core:$mockito",
-            junit                   : "junit:junit:$junit",
-            testRunner              : "com.android.support.test:runner:$testRunner",
-            espresso                : "com.android.support.test.espresso:espresso-core:$espresso",
-            multidex                : "com.android.support:multidex:$multidex",
-            multidexInstrumentation : "com.android.support:multidex-instrumentation:$multidex",
-            timber                  : "com.jakewharton.timber:timber:$timber",
-            glide                   : "com.github.bumptech.glide:glide:$glide",
-            glideProcessor          : "com.github.bumptech.glide:compiler:$glide",
-            processPhoenix          : "com.jakewharton:process-phoenix:$phoenix",
-            reflection              : "org.jooq:joor:$reflection"
+            appcompat              : "com.android.support:appcompat-v7:$support",
+            palette                : "com.android.support:palette-v7:$support",
+            design                 : "com.android.support:design:$support",
+            cardview               : "com.android.support:cardview-v7:$support",
+            recyclerview           : "com.android.support:recyclerview-v7:$support",
+            constraint             : "com.android.support.constraint:constraint-layout:$constraint",
+            lifecycleExtensions    : "android.arch.lifecycle:extensions:$lifecycle",
+            lifecycleCommonJava8   : "android.arch.lifecycle:common-java8:$lifecycle",
+            lifecycleViewModel     : "android.arch.core:core-testing:$lifecycle",
+            lifecycleLiveData      : "android.arch.core:core-testing:$lifecycle",
+            lifecycleCompiler      : "android.arch.lifecycle:compiler:$lifecycle",
+            lifecycleTest          : "android.arch.core:core-testing:$lifecycle",
+            lifecycleRoom          : "android.arch.persistence.room:runtime:$room",
+            lifecycleRoomCompiler  : "android.arch.persistence.room:compiler:$room",
+            lifecycleRoomTest      : "android.arch.persistence.room:testing:$room",
+            lifecyclePaging        : "android.arch.paging:runtime:$paging",
+            roomRxjava             : "android.arch.persistence.room:rxjava2:$room",
+            liveDataRxjava         : "android.arch.lifecycle:reactivestreams:$lifecycle",
+            findBugsJrs305         : "com.google.code.findbugs:jsr305:$findBugsJrs305",
+            okhttp3                : "com.squareup.okhttp3:okhttp:$okhttp3",
+            loggingInterceptor     : "com.squareup.okhttp3:logging-interceptor:$okhttp3",
+            okio                   : "com.squareup.okio:okio:$okio",
+            retrofit2              : "com.squareup.retrofit2:retrofit:$retrofit2",
+            adapterRxjava2         : "com.squareup.retrofit2:adapter-rxjava2:$retrofit2",
+            converterMoshi         : "com.squareup.retrofit2:converter-moshi:$retrofit2",
+            moshi                  : "com.squareup.moshi:moshi:$moshi",
+            moshiK                 : "com.squareup.moshi:moshi-kotlin:$moshi",
+            rxjava                 : "io.reactivex.rxjava2:rxjava:$rxjava",
+            rxandroid              : "io.reactivex.rxjava2:rxandroid:$rxandroid",
+            dispose                : "com.uber.autodispose:autodispose:$dispose",
+            disposeAndroid         : "com.uber.autodispose:autodispose-android:$dispose",
+            disposeComponent       : "com.uber.autodispose:autodispose-android-archcomponents:$dispose",
+            disposeComponentTest   : "com.uber.autodispose:autodispose-android-archcomponents-test:$dispose",
+            disposeK               : "com.uber.autodispose:autodispose-kotlin:$dispose",
+            disposeAndroidK        : "com.uber.autodispose:autodispose-android-kotlin:$dispose",
+            disposeComponentK      : "com.uber.autodispose:autodispose-android-archcomponents-kotlin:$dispose",
+            disposeComponentTestK  : "com.uber.autodispose:autodispose-android-archcomponents-test-kotlin:$dispose",
+            annotationApi          : "javax.annotation:javax.annotation-api:$javaxAnnotation",
+            errorProne             : "com.google.errorprone:error_prone_annotations:$errorProne",
+            jetAnnotations         : "org.jetbrains:annotations:$jetAnnotations",
+            inject                 : "javax.inject:javax.inject:$inject",
+            autoValue              : "com.google.auto.value:auto-value:$autoValue",
+            autoValueCompiler      : "com.google.auto.value:auto-value:$autoValue",
+            dagger                 : "com.google.dagger:dagger:$dagger2",
+            daggerAndroid          : "com.google.dagger:dagger-android:$dagger2",
+            daggerAndroidSupport   : "com.google.dagger:dagger-android-support:$dagger2",
+            daggerCompiler         : "com.google.dagger:dagger-compiler:$dagger2",
+            daggerAndroidProcessor : "com.google.dagger:dagger-android-processor:$dagger2",
+            rxPermissions          : "com.tbruyelle.rxpermissions2:rxpermissions:$permissions",
+            androidJob             : "com.evernote:android-job:$androidJob",
+            parceler               : "org.parceler:parceler-api:$parceler",
+            parcelerProcessor      : "org.parceler:parceler:$parceler",
+            theAdapter             : "com.github.thepacific:adapter:$mAdapter",
+            theData                : "com.github.thepacific:data:$mData",
+            theCommon              : "com.github.thepacific:common:$mCommon",
+            thePresentation        : "com.github.thepacific:presentation:$mPresentation",
+            theGuava               : "com.github.thepacific:guava:$mGuava",
+            mockito                : "org.mockito:mockito-core:$mockito",
+            truth                  : "com.google.truth:truth:$truth",
+            junit                  : "junit:junit:$junit",
+            testRunner             : "com.android.support.test:runner:$testRunner",
+            espresso               : "com.android.support.test.espresso:espresso-core:$espresso",
+            multidex               : "com.android.support:multidex:$multidex",
+            multidexInstrumentation: "com.android.support:multidex-instrumentation:$multidex",
+            timber                 : "com.jakewharton.timber:timber:$timber",
+            glide                  : "com.github.bumptech.glide:glide:$glide",
+            glideOkhttp3           : "com.github.bumptech.glide:okhttp3-integration:$glide",
+            glideProcessor         : "com.github.bumptech.glide:compiler:$glide",
+            processPhoenix         : "com.jakewharton:process-phoenix:$phoenix",
+            reflection             : "org.jooq:joor-java-8:$reflection",
+            leakcanary             : "com.squareup.leakcanary:leakcanary-android:$leakcanary",
+            leakcanaryNo           : "com.squareup.leakcanary:leakcanary-android-no-op:$leakcanary",
+            threeTenBP             : "com.jakewharton.threetenabp:threetenabp:$threeTenBP"
     ]
 }

@@ -80,7 +80,7 @@ install {
                     developer {
                         id 'ThePacific'
                         name 'The Pacific'
-                        email 'io.2016@outlook.com'
+                        email 'thepacific2016@aol.com'
                     }
                 }
             }
@@ -98,8 +98,8 @@ bintray {
     publish true
     pkg {
         repo = "maven"
-        name = "adapter"
-        labels = ['adapter', 'ThePacific']
+        name = "divider"
+        labels = ['divider', 'ThePacific']
         websiteUrl = WEB_SITE_URL
         issueTrackerUrl = ISSUE_TRACKER_URL
         vcsUrl = VCS_URL

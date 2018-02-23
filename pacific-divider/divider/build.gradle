@@ -4,5 +4,5 @@ apply from: "../config/bintray_push.gradle"
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation dep.recyclerview
-    implementation dep.lifecycleJava8
+    implementation dep.lifecycleExtensions
 }

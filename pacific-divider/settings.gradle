@@ -1,2 +1,2 @@
-include ':app', ':divider'
-//include ':divider'
+//include ':app', ':divider'
+include ':divider'

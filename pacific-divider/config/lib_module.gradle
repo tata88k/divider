@@ -87,9 +87,4 @@ dependencies {
     androidTestImplementation(dep.espresso, {
         exclude group: 'com.android.support', module: '*'
     })
-
-    implementation dep.supportV4
-    implementation dep.lifecycleJava8
-    implementation dep.lifecycleReactivestreams
-    implementation dep.lifecycleExtensions
 }

@@ -9,10 +9,11 @@ Android library providing a simple way to control divider items of RecyclerView.
 compile 'com.github.thepacific:divider:{lastestVersion}'
 ```
 
-# Usage
+# Usage (Only support LinearLayoutManager right)
 
 ``` java
         recyclerView.addItemDecoration(RecyclerViewDivider.builder(this)
+                .horizontal()//default is vertical
                 .leftMargin(R.dimen.divider_left)
                 .rightMargin(R.dimen.divider_right)
                 .topMargin(R.dimen.divider_top)

@@ -14,7 +14,7 @@ ext {
     groupId = "com.github.thepacific"
     compile = 27
     buildTools = "27.0.3"
-    min = "16"
+    min = "14"
     target = "27"
     versionCode = 4
     versionName = "0.0.4"

@@ -1,6 +1,7 @@
 # Divider
 
 Android library providing a simple way to control divider items of RecyclerView.
+
 NOTE: only support LinearLayoutManager by now
 
 [ ![Download](https://api.bintray.com/packages/thepacific/maven/divider/images/download.svg) ](https://bintray.com/thepacific/maven/divider/_latestVersion)

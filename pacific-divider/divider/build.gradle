@@ -1,8 +1,8 @@
-apply from: "../config/lib_module.gradle"
-apply from: "../config/bintray_push.gradle"
+import com.square.buildsrc.BuildPlugins
+import com.square.buildsrc.Libs
+
+apply from: "../gradle/android_lib_module.gradle"
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation dep.recyclerview
-    implementation dep.lifecycleExtensions
 }

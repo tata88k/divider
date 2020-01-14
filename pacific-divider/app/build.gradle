@@ -1,9 +1,13 @@
-apply from: "../config/app_module.gradle"
+import com.square.buildsrc.BuildPlugins
+import com.square.buildsrc.Libs
+
+apply from: "../gradle/android_app_module.gradle"
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
 
 android {
     defaultConfig {
-        applicationId "com.thepacific.paficif_divider"
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        applicationId "com.example.divider"
     }
 }
 
@@ -11,3 +15,5 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation project(":divider")
 }
+
+

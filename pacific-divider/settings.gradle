@@ -1,2 +1,3 @@
-//include ':app', ':divider'
+include ':buildSrc'
+include ':app'
 include ':divider'

@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="pacific-divider/app" />
+      <module fileurl="file://$PROJECT_DIR$/buildSrc/buildSrc.iml" filepath="$PROJECT_DIR$/buildSrc/buildSrc.iml" group="pacific-divider/buildSrc" />
       <module fileurl="file://$PROJECT_DIR$/divider/divider.iml" filepath="$PROJECT_DIR$/divider/divider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/divider-pacific-divider.iml" filepath="$PROJECT_DIR$/divider-pacific-divider.iml" group="pacific-divider" />
       <module fileurl="file://$PROJECT_DIR$/pacific-divider.iml" filepath="$PROJECT_DIR$/pacific-divider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/divider/pacific-divider-divider.iml" filepath="$PROJECT_DIR$/divider/pacific-divider-divider.iml" group="pacific-divider/divider" />
     </modules>
   </component>
 </project>

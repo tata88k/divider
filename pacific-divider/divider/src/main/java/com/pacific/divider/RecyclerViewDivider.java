@@ -151,8 +151,7 @@ public final class RecyclerViewDivider extends RecyclerView.ItemDecoration {
     }
 
     @Override
-    public void getItemOffsets(Rect outRect, View view, RecyclerView parent,
-                               RecyclerView.State state) {
+    public void getItemOffsets(Rect outRect, View view, RecyclerView parent, RecyclerView.State state) {
         lastPosition = parent.getAdapter().getItemCount() - 1;
         final int position = getAdapterPosition(view);
         if (position < 0) return;
